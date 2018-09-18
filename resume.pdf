@@ -1,0 +1,12 @@
+html 只做一件事情就是定义这是什么东西 至于样式 那是css的事情 和我无关
+导航条 navigation bar 在html中是 <nav></nav>
+<img src="" alt="logo" /> alt：alternative  可选内容 当图片无法加载时 替换图片 展示
+div 和 span  是两个没有任何意义的 标签 所以 要配合 class是用  如果不给div添加class 就是没有意义的划分 不知道什么意思
+ul: un-ordered list(无序列表)    li: list item(列表中的每一个选项)
+main: 页面中的主要内容 要放在 <main></main> 标签中
+hr:   水平分割线  horizontal rule
+br:   强行换行    break return （所有的源代码中的换行 都会被压缩成一个空格 所以想换行 必须用 br）
+描述列表 ： <dl>             description list
+            <dt></dt>      description term :       条款
+            <dd></dd>      description definition : 定义
+          </dl>

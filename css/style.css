@@ -1,0 +1,402 @@
+body{
+
+    background: #EFEFEF;
+    color:white;
+    margin: 0;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+hr{
+    height: 0;
+    border: none;
+    border-top: 1px solid #DEDEDE;
+}
+a{
+    text-decoration: none;
+    color: #B7B7B7;
+
+}
+ul{
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+
+.clearflix::after{
+    content: '';
+    display: block;
+    clear: both
+}
+.tabNavBar{
+    padding:30px 0px;
+    position:fixed;
+    width: 100%;
+    transition: all 0.5s;
+}
+.tabNavBar.sticky{
+    padding:20px 0px;
+    position:fixed;
+    width: 100%;
+    background: whitesmoke;
+    transition: all 0.5s;
+    color: #3d4451;
+    box-shadow:0 0 10px rgba(0,0,0,0.25);
+    z-index: 1;
+}
+.topNavBar-inner{
+    padding: 0 16px;
+}
+.tabNavBar  nav > ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.tabNavBar  nav > ul > li{
+    float: left;
+    margin-left:17px;
+    margin-right: 17px;
+    position: relative;
+}
+.tabNavBar  nav > ul > li > a{
+    font-size: 12px;
+    color:inherit;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: block
+}
+
+.tabNavBar .submenu{
+    position: absolute;
+    display: none;
+    top:25px;
+    right:0;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+}
+.tabNavBar li.active>.submenu{
+    display: block;
+    background: whitesmoke;
+    color: black;
+    animation: submenuTrigle .3s;
+}
+@keyframes submenuTrigle {
+    from{
+        margin-right:100%;
+    }
+    to{
+        margin-right:0%;
+    }
+}
+.tabNavBar .submenu>li{
+  word-break: keep-all;
+    padding: 2px 10px 2px 20px;
+    cursor: pointer;
+}
+.tabNavBar  nav > ul > li.active > a::after,.tabNavBar  nav > ul > li.highlight > a::after{
+    content: '';
+    display: block;
+    height: 3px;
+    background: #e9666a;
+    border-radius: 1px;
+    animation: menuSlid .3s;
+}
+@keyframes menuSlid {
+    0%{
+        width:0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+
+.tabNavBar .logo{
+    font-size: 24px;
+    font-family: "Arial Black";
+}
+.logo .rs{
+    margin-right: 4px;
+    color:#E6686A
+}
+.logo .card{
+   color: #9A9DA2;
+}
+
+.banner{
+    background-image: url(../img/bgImg.jpg);
+    /* border:1px solid red; */
+    height: 515px;
+    background-position: center center;
+    /* 背景图片按比例缩放 */
+    background-size: cover;
+}
+/* banner 的遮罩 */
+.banner .mask{
+    height: inherit;
+    background-color:rgba(36, 40, 50,0.8);
+}
+
+.userCard{
+    background-color: #FFFFFF;
+    color:Black;
+    /* max-width会自适应 而width会产生滚动条 */
+    max-width: 940px;
+    /* 如何让一个div水平居中 */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,.5);
+}
+.userCard .welcome{
+    background-color: #e8676b;
+    color: white;
+    /* 如何给一个span中的文字 水平 垂直居中*/
+    /* 新手做法
+    display: inline-block;
+    width: 70px;
+    height: 29px;
+    text-align: center;
+    */
+    /* 老司机做法 由内往外做*/
+    padding: 7px 12px;
+    line-height: 1.1;
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.userCard .welcome .square{
+    border:5px solid transparent;
+    width:0px;
+    border-top-color:#E6686A;
+    border-left-color:#E6686A;
+    position: absolute;
+    left:10%;
+    top:100%;
+}
+
+.textAndPicture{
+    padding: 57px 50px 15px 50px;
+
+}
+.picture{
+    float: left;
+}
+.text{
+    float: left;
+    margin-left: 65px;
+    width: 450px;
+}
+.text h1{
+    margin-top: 26px;
+    margin-bottom: 5px;
+}
+.text hr{
+    margin: 20px 0;
+}
+
+.text dl dt{
+    float: left;
+    padding: 5px 0;
+}
+.text dl dd{
+    float: left;
+    padding: 5px 0;
+}
+.text dl dt{
+    width:30%;
+    font-weight: bold;
+}
+.text dl dd{
+    width: 70%;
+    color: #9da0a7;
+}
+
+.userCard footer{
+    background: #e8676b;
+    text-align: center;
+    padding: 15px 0;
+}
+.userCard footer a{
+    margin: 5px 15px;
+    display: inline-block;
+    width: 40px;
+    line-height: 30px;
+    padding: 5px 0;
+    border-radius: 50%;
+}
+.userCard footer a:hover{
+    background: #CF5D5F;
+}
+.userCard footer a svg{
+    width: 30px;
+    height: 30px;
+    fill: white;
+    vertical-align: top;
+}
+
+main{
+    margin-top: -300px;
+}
+
+.download{
+    color: black;
+    /* border: 1px solid red; */
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.download a.btn{
+    border: 1px solid #cbcdcf;
+    border-radius: 2px;
+    display: inline-block;
+    padding: 20px 55px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    /* 一秒钟过渡 */
+    transition: box-shadow 0.2s;
+}
+.download a.btn:hover{
+    opacity: 0.95;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.download p{
+    text-align: center;
+    font-family: "Open Sans";
+}
+
+
+
+/*技能 and 作品集*/
+.skills,.protfolio{
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: black;
+    margin-top: 50px;
+}
+.skills h2,.protfolio h2{
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.skills ol{
+    text-align: left;
+    background-color: #FFFFFF;
+    padding:40px 50px 0px;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,.5);
+}
+.skills ol li{
+    list-style: none;
+    float: right;
+    width:47%;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    font-size:14px;
+    /*border:1px solid red;*/
+}
+.skills ol li:nth-child(odd){
+    /*background-color: red;*/
+    float: left;
+}
+.skills ol li .processBar{
+    height: 5px;
+    background-color: #F7E2E2;
+    border-radius:5px;
+    overflow: hidden;
+}
+.skills.offset ol li .processBar .process{
+    height: inherit;
+    background-color: #D96E6E;
+    width: 65%;
+    border-radius:5px;
+    transform: translateX(-400px);
+
+}
+.skills ol li .processBar .process{
+    height: inherit;
+    background-color: #D96E6E;
+    width: 65%;
+    border-radius:5px;
+    transform: translateX(0px);
+    transition: all .5s;
+
+}
+
+[data-x].offset{
+    transform: translateY(100px);
+}
+[data-x]{
+    transform: translateY(0);
+    transition: all .5s;
+}
+
+
+section.protfolio  .swiper-button-prev,section.protfolio .swiper-button-next{
+    background-color: white;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+@keyframes s {
+    0%{
+        width:0px;height:0px;opacity: 1;
+    }
+    100%{
+        width:100px;height:100px;opacity: 0;
+    }
+}
+.site-welcome{
+    display: none;
+}
+.site-welcome.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: lightgray;
+    z-index: 1;
+}
+.loading{
+    width:100px;
+    height:100px;
+    position: relative;
+}
+.loading::before,.loading::after{
+    content:'';
+    position: absolute;
+    top:0;right:0;bottom:0;left:0;
+    background: #000;
+    border-radius:50%;
+    margin:auto;
+    animation: s 1.5s infinite linear;
+}
+.loading::after{
+    animation-delay:0.75s;
+}
+.swiper-container {
+    width: 600px;
+    height: 300px;
+}
+
+
+
+
+
