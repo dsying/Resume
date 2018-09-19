@@ -17,9 +17,9 @@
         },
 
         // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
+        // scrollbar: {
+        //     el: '.swiper-scrollbar',
+        // },
     })
 }.call()
 //var specialTags = '你咬我!'
