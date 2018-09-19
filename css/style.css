@@ -19,7 +19,7 @@ a{
     color: #B7B7B7;
 
 }
-ul{
+ul,ol{
     list-style: none;
 }
 h1,h2,h3,h4,h5,h6{
@@ -273,7 +273,7 @@ main{
 
 
 /*技能 and 作品集*/
-.skills,.protfolio{
+.skills,.protfolio,.messages{
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
@@ -281,7 +281,7 @@ main{
     color: black;
     margin-top: 50px;
 }
-.skills h2,.protfolio h2{
+.skills h2,.protfolio h2,.messages h2{
     margin-bottom: 20px;
     font-weight: 600;
 }
@@ -394,6 +394,24 @@ section.protfolio  .swiper-button-prev,section.protfolio .swiper-button-next{
 .swiper-container {
     width: 600px;
     height: 300px;
+}
+
+section.messages{
+    max-width: 600px;
+}
+section.messages ol{
+    border-top: 1px solid #DDD;
+    margin-bottom: 20px;
+}
+section.messages ol>li{
+    padding: 16px;
+    border-bottom: 1px solid #DDD;
+}
+section.messages ol>li:hover{
+    background-color: #FBFBFB;
+}
+.messages #postMsg{
+
 }
 
 

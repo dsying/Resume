@@ -8,7 +8,7 @@
 
 // 滚动条 事件监听
     window.onscroll = function(x) {
-        console.log('scrollY', window.scrollY)
+        //console.log('scrollY', window.scrollY)
         // console.log('pageYOffset',window.pageYOffset);
         // console.log('documentElement.scrollTop',document.documentElement.scrollTop);
         // console.log('document.body.scrollTop',document.body.scrollTop);
