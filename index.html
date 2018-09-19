@@ -5,8 +5,8 @@
     <title>个人简历</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="//at.alicdn.com/t/font_683031_wqhmiapc1nka9k9.js"></script>
-    <link rel="stylesheet" href="./node_modules/swiper/dist/css/swiper.min.css">
-
+    <!-- <link rel="stylesheet" href="./node_modules/swiper/dist/css/swiper.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
 </head>
 <body>
     <!--加载动画-->
@@ -193,7 +193,7 @@
             <div class="swiper-pagination"></div>
 
             <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
+ <!--            <div class="swiper-scrollbar"></div> -->
         </div>
 
         <!-- If we need navigation buttons -->
@@ -211,14 +211,25 @@
         </form>
     </section>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Mock.js/1.0.0/mock-min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
-    <script src="./node_modules/swiper/dist/js/swiper.min.js"></script>
+    <!-- <script src="./node_modules/swiper/dist/js/swiper.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
     <!--模块化-->
     <!--<script src="./js/loading_animation.js"></script>-->
     <script src="./js/topNavBar.js"></script>
     <script src="./js/auto_slide_up.js"></script>
     <script src="./js/init_swiper.js"></script>
     <script src="./js/message.js"></script>
+    <script>
+        var wrapper = document.querySelectorAll('.swiper-wrapper img')
+        console.log(wrapper)
+        var Random = Mock.Random
+        for(let i = 0; i < wrapper.length; i++){
+
+            wrapper[i].src = Random.image('600x300', Random.hex(), '#FFF', 'Mock.js')
+        }
+    </script>
 </body>
 </html>
